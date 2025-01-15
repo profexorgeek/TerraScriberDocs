@@ -1,6 +1,6 @@
 ---
-icon: hand-wave
-cover: https://gitbookio.github.io/onboarding-template-images/header.png
+icon: map
+cover: .gitbook/assets/logo-2x.png
 coverY: 0
 layout:
   cover:
@@ -18,12 +18,39 @@ layout:
     visible: true
 ---
 
-# Welcome
+# Welcome to TerraScriber
 
-Welcome to the GitBook Starter Template! Here you'll get an overview of all the amazing features GitBook offers to help you build beautiful, interactive documentation.
+Welcome to the TerraScriber documentation!
 
-You'll see some of the best parts of GitBook in action — and find help on how you can turn this template into your own.
+{% hint style="info" %}
+To file bugs, request features, or request new asset packs, please [visit our community forums](https://narfox.itch.io/terrascriber/community) from the [TerraScriber store page](https://narfox.itch.io/terrascriber).
+{% endhint %}
 
-### Jump right in
+TerraScriber is a map making tool that enables GMs/DMs or artists to quickly make attractive maps for their physical or virtual tabletop gaming.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Create your first site</td><td></td><td></td><td><a href="getting-started/quickstart.md">quickstart.md</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics of GitBook</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Publish your docs</strong></td><td>Share your docs online</td><td></td><td></td><td><a href="getting-started/publish-your-docs.md">publish-your-docs.md</a></td></tr></tbody></table>
+TerraScriber has these features for players and game masters:
+
+* Create grid-based maps using Tile Layers - an auto-tiling system to quickly lay out map geometry.
+* Place non-grid-based Items to decorate maps using rotation, duplication, flipping, and draw order.
+* Apply effects to maps to control things like color saturation, contrast, and more.
+* Powerful map exporting for digital (VTT) or print use, automatically slicing the map into common print sizes.
+* Share maps with others as either a source file or an exported image.
+* Import custom content packs to make maps for a wide variety of grid-based tabletop games.
+* Robust fantasy map-making pack built into the tool!
+* Create and share your own tile and item packs.
+
+We recommend [checking out our Quickstart](getting-started/quickstart.md) for a no-frills explanation of how TerraScriber works!
+
+
+
+### Store Page
+
+TerraScriber is available on Itch.io:
+
+{% embed url="https://narfox.itch.io/terrascriber" %}
+
+### Roadmap
+
+Our roadmap is publically available on Trello:
+
+{% embed url="https://trello.com/b/a6j9ABxB/terrascriber" %}
