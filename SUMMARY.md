@@ -15,5 +15,5 @@
 
 ## CREATING CONTENT
 
-* [Creating a Content Pack](creating-content/integrations.md)
+* [Creator Quickstart](creating-content/integrations.md)
 * [Importing a Content Pack](creating-content/importing-a-content-pack.md)
