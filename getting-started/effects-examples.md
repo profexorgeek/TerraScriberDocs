@@ -1,6 +1,6 @@
 ---
-description: Ideas for map effects.
 icon: sparkles
+description: Ideas for map effects.
 ---
 
 # Effects Examples
@@ -15,7 +15,7 @@ This image shows a map with default colors. This helps see how the other effects
 
 ### Printer Friendly
 
-The following image shows the example map with it's contrasted boosted and the saturation turned all the way off. Tweaking the contrast settings may help you export a map that prints well on a laser or other black and white printer.
+The following image shows the example map with it's contrast boosted and the saturation turned all the way off. Tweaking the contrast settings may help you export a map that prints well on a laser or other black and white printer.
 
 <figure><img src="../.gitbook/assets/fx-bnw.png" alt=""><figcaption></figcaption></figure>
 

@@ -12,7 +12,7 @@ There are two primary types of content for TerraScriber: Items and Tile Layers. 
 {% hint style="info" %}
 TerraScriber ships with a built-in pack called "coreFantasy". This pack is copied into the content directory every single time the application starts to encourage learning and experimenting with the example set without worrying about breaking compatibility.
 
-If you make changes or name your set in a way that conflicts with the "coreFantasy" pack, your changes will be overwritten every time the application starts!
+If you make changes or name your set in a way that conflicts with the "coreFantasy" pack, your changes will be overwritten every time the application starts. This is important to prevent content creators from accidentally breaking all maps while trying to learn!
 
 Looking at the coreFantasy pack is a great way to understand how Packs, TileSets, and ItemSets all work together.
 {% endhint %}
