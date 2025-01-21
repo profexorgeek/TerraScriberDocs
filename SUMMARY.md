@@ -5,6 +5,7 @@
 ## Getting Started
 
 * [Quickstart](getting-started/quickstart.md)
+* [Shortcut Keys](getting-started/shortcut-keys.md)
 
 ## CREATING MAPS
 
