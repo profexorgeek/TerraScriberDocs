@@ -1,11 +1,6 @@
 ---
 icon: map
-cover: .gitbook/assets/logo-2x.png
-coverY: 0
 layout:
-  cover:
-    visible: true
-    size: full
   title:
     visible: true
   description:
@@ -20,7 +15,7 @@ layout:
 
 # Welcome to TerraScriber
 
-Welcome to the TerraScriber documentation!
+<figure><img src=".gitbook/assets/logo-2x.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 To file bugs, request features, or request new asset packs, please [visit our community forums](https://narfox.itch.io/terrascriber/community) from the [TerraScriber store page](https://narfox.itch.io/terrascriber).
@@ -41,16 +36,11 @@ TerraScriber has these features for players and game masters:
 
 We recommend [checking out our Quickstart](getting-started/quickstart.md) for a no-frills explanation of how TerraScriber works!
 
+### Links
 
+* [Get TerraScriber on Itch.io](https://narfox.itch.io/terrascriber)
+* [Check out our Dev Status](https://trello.com/b/a6j9ABxB/terrascriber)
+* [File a bug](https://itch.io/t/4468451/bugs)
+* [Request a feature](https://itch.io/t/4468466/feature-requests)
+* [Request new art content](https://itch.io/t/4468470/art-requests)
 
-### Store Page
-
-TerraScriber is available on Itch.io:
-
-{% embed url="https://narfox.itch.io/terrascriber" %}
-
-### Roadmap
-
-Our roadmap is publically available on Trello:
-
-{% embed url="https://trello.com/b/a6j9ABxB/terrascriber" %}

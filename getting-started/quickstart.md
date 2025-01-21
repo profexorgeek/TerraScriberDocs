@@ -5,10 +5,6 @@ description: A quick overview of how TerraScriber works.
 
 # Quickstart
 
-{% hint style="info" %}
-We are actively working on all of these features and UI is changing rapidly. Screenshots are coming as soon as we reach a semi-final implementation state on the UI!
-{% endhint %}
-
 TerraScriber makes it easy to create attractive maps for your virtual or tabletop gaming session! This page summarizes the overall workflow to create a map.
 
 TerraScriber uses a grid-based system for creating maps that works nicely with most grid-based tabletop games. The default content that comes with TerraScriber assumes that a grid square is approximately five feet.
@@ -26,8 +22,6 @@ Layers define the main "geometry" of your map and are grid based - things like f
 Items are decorative map elements and are not grid based - things like tables, chairs, signposts, trees, and virtually anything else can be placed as an Item.
 
 Items always render on top of Layers.
-
-####
 
 #### Camera Control
 
