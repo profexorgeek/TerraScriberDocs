@@ -1,9 +1,9 @@
 ---
-description: This page lists the shortcut keys available in TerraScriber
 icon: keyboard
+description: This page lists the shortcut keys available in TerraScriber
 ---
 
-# Shortcut Keys
+# Shortcut Keys & Controls
 
 ### General
 
@@ -27,6 +27,7 @@ icon: keyboard
 ### Item Mode
 
 * `RIGHT CLICK` : Drag selection.
+* `SHIFT`: add/remove items from selection
 * `ARROW KEYS`: Nudge selection 1px.
 * `SPACE` : Panning mode, click and drag to pan while space is held down.
 * `DELETE`: Delete the selection.

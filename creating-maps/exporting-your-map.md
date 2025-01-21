@@ -7,7 +7,7 @@ description: How to export your map.
 
 The Export mode allows you to export your map at a specific zoom level. Map tiles are 16px, so you can figure out your total export dimensions as follows:
 
-`Tilesize * ExportScale * 16`
+`NumberOfTiles * ExportScale * 16`
 
 {% hint style="info" %}
 The maximum Export Scale is dictated by your hardware - usually your graphics card. It is recommended that you do not try exporting maps larger than 4000x4000 pixels. If you do, make sure your map is saved in case you crash TerraScriber!

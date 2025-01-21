@@ -23,6 +23,8 @@ To file bugs, request features, or request new asset packs, please [visit our co
 
 TerraScriber is a map making tool that enables GMs/DMs or artists to quickly make attractive maps for their physical or virtual tabletop gaming.
 
+<figure><img src=".gitbook/assets/fx-sepia.png" alt=""><figcaption></figcaption></figure>
+
 TerraScriber has these features for players and game masters:
 
 * Create grid-based maps using Tile Layers - an auto-tiling system to quickly lay out map geometry.
