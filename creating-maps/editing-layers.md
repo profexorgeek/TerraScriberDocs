@@ -24,3 +24,5 @@ The following image shows unique layer editing tools and their functionality is 
 9. Move selected layer down (lower layers render below other layers)
 10. Delete selected layer (**this action has no undo**)
 11. Layer editing cursor, the color indicates whether you are adding or removing tiles
+
+`RIGHT CLICK` will swap between add and remove tile mode.

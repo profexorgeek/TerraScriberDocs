@@ -15,9 +15,14 @@
 * [Editing Layers](creating-maps/editing-layers.md)
 * [Editing Items](creating-maps/editing-items.md)
 * [Effects & Settings](creating-maps/effects-and-settings.md)
+* [Resizing Your Map](creating-maps/resizing-your-map.md)
 * [Exporting Your Map](creating-maps/exporting-your-map.md)
 
 ## CREATING CONTENT
 
 * [Creator Quickstart](creating-content/integrations.md)
 * [Importing a Content Pack](creating-content/importing-a-content-pack.md)
+
+## RELEASE NOTES
+
+* [v1.1.X](release-notes/v1.1.x.md)

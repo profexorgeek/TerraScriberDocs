@@ -17,17 +17,24 @@ description: This page lists the shortcut keys available in TerraScriber
 * `1`: Layer Editing Mode.
 * `2`: Item Editing Mode.
 * `3`: Settings Mode.
-* `4`: Export Mode.
+* `4`: Resize Mode.
+* `5`: Export Mode.
 
 ### Layer Mode
 
+Layer mode has two "sub modes" - adding tiles and removing tiles. The cursor color indicates whether you are adding (green) or removing (red).
+
 * `+`: Add tiles mode.
 * `-`: Remove tiles mode.
+* `RIGHT CLICK`: Swap between add/remove tiles
 
 ### Item Mode
 
-* `RIGHT CLICK` : Drag selection.
-* `SHIFT`: add/remove items from selection
+Item mode has two "sub modes" - _adding_ items and _editing_ items. Clicking any item in the items list will put the cursor into "adding mode". Right clicking, clears the item being added and returns you to editing existing items.
+
+* `RIGHT CLICK` : Return to editing after adding items
+* `RIGHT DRAG` : Drag selection.
+* `SHIFT`: Add/remove items from selection
 * `ARROW KEYS`: Nudge selection 1px.
 * `SPACE` : Panning mode, click and drag to pan while space is held down.
 * `DELETE`: Delete the selection.

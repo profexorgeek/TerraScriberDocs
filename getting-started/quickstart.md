@@ -13,6 +13,8 @@ TerraScriber uses a grid-based system for creating maps that works nicely with m
 
 You can create a new map on the main title screen. Once created, the new map will automatically be given a filename and saved to disk. The new empty map will show up in the list of maps and will be available for editing.
 
+<figure><img src="../.gitbook/assets/create-map.png" alt=""><figcaption></figcaption></figure>
+
 ### Editing Your Map
 
 TerraScriber divides editing into two main modes: [Layers ](../creating-maps/editing-layers.md)and [Items](../creating-maps/editing-items.md).
@@ -23,6 +25,8 @@ Items are decorative map elements and are not grid based - things like tables, c
 
 Items always render on top of Layers.
 
+<figure><img src="../.gitbook/assets/terrascriber-editor.png" alt=""><figcaption></figcaption></figure>
+
 #### Camera Control
 
 Use the mouse wheel to zoom in and out. The current zoom is shown in the bottom left status bar.
@@ -30,6 +34,8 @@ Use the mouse wheel to zoom in and out. The current zoom is shown in the bottom 
 Press middle mouse to drag/pan the map.
 
 Holding the space key will also drag/pan the map if you are using a touchpad or do not have a middle click.
+
+Check out the [Shortcut Keys & Controls](shortcut-keys-and-controls.md) page for all shortcuts!
 
 #### Saving Your Map
 
@@ -44,6 +50,8 @@ At this time, TerraScriber does not have undo functionality. Changing the name o
 You can change the map name and apply effects to the overall look of your map in [Settings mode](../creating-maps/effects-and-settings.md).
 
 The resizing feature is coming soon and will appear in the Map Settings panel.
+
+<figure><img src="../.gitbook/assets/fx-sepia.png" alt=""><figcaption></figcaption></figure>
 
 #### Exporting Your Map
 
