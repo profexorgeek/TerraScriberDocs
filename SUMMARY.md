@@ -26,3 +26,4 @@
 ## RELEASE NOTES
 
 * [v1.1.X](release-notes/v1.1.x.md)
+* [v1.2.X](release-notes/v1.2.x.md)
