@@ -1,63 +1,55 @@
 ---
-icon: pencil
 description: >-
   This page describes how to create your own tile and image sets for
   TerraScriber.
+icon: pencil
 ---
 
 # Creator Quickstart
 
-There are two primary types of content for TerraScriber: Items and Tile Layers. Both types of content are saved into a content `Pack` that can be loaded and used by map makers. This section offers advice for how to approach the art process and then how to share your content as a `Pack` with other users.
+There are two primary types of content for TerraScriber: Items and Tile Layers. Both types of content are saved into a content `Pack` that can be loaded and used by map makers.
+
+Starting with v1.3, we have put a lot of effort into making Item and Tileset creation as easy as possible.
 
 {% hint style="info" %}
 TerraScriber ships with a built-in pack called "coreFantasy". This pack is copied into the content directory every single time the application starts to encourage learning and experimenting with the example set without worrying about breaking compatibility.
 
-If you make changes or name your set in a way that conflicts with the "coreFantasy" pack, your changes will be overwritten every time the application starts. This is important to prevent content creators from accidentally breaking all maps while trying to learn!
+If you make changes or name your set in a way that conflicts with the "coreFantasy" pack, **your changes will be overwritten every time the application starts**. This is important to prevent content creators from accidentally breaking all maps while trying to learn!
 
 Looking at the coreFantasy pack is a great way to understand how Packs, TileSets, and ItemSets all work together.
 {% endhint %}
 
-You can use the "OPEN CONTENT FOLDER" button on the main menu to open and inspect the content that comes with the application.
+You can get started editing content from the main menu, by clicking the CREATE/EDIT PACKS button.
+
+### TerraScriber Content Pack
+
+A `Pack` consists of two pieces: a png file that contains all of the art used by the pack into a single spritesheet, and a JSON file that defines the items and tilesets in the pack.
+
+Packs define Items - images that can be placed arbitrarily and rotated or flipped, and Tilesets - tiles that can be used to create water, walls, and other terrain that is aligned to a grid.
+
+It is a good idea to organize packs into thematic collections, for example an overworld, dungeons, or villages that contains items and tilesets that work together.
 
 {% hint style="info" %}
-All item coordinates in both TileSets and ImageSets are zero indexed and measured from the top-left corner of an image.
+TerraScriber generates unique IDs for content packs and all items and tilesets within a pack. It is _**strongly recommended**_ that you do not edit the IDs that are automatically created for your content. This helps prevent ID collisions for users that may be using content packs from a variety of sources!
 {% endhint %}
 
-### Packs
+### Creating a Pack
 
-A pack is just a [JSON ](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON)file that tells TerraScriber how to load your content. The pack JSON file is formatted as follows:
+On the Pack Chooser screen, you can select an existing pack to edit or create a new pack. When you create a new pack, TerraScriber will create a folder and a JSON file to hold all of the pack data. **TerraScriber expects you to add an image in this folder with a name that matches the JSON file** before you can edit the pack! This is because the first step in editing a pack is to load the image associated with a pack.
 
-```json
-{
-  "name": "Core Fantasy",
-  "description": "The fantasy content set that comes with the mapping tool!",
-  "author": "Justin Johnson",
-  "version": "1.0",
-  "tileSets": [],
-  "itemSets":[]
-  }
-```
+You can use the "OPEN CONTENT FOLDER" button on the main menu to open and inspect the content that comes with the application and add an image to your Pack.
 
-* The `name` parameter is the name of your pack that will show up in the user interface.
-* The `description`  parameter allows you to specify a description but currently does not appear in the TerraScriber tool.
-* The `author` parameter allows you to specify the author but also does not appear anywhere in the TerraScriber tool.
-* The `version` parameter is not yet used by the tool but allows content authors to add a version that shows which version of TileScriber the pack was built for. This allows us to add features with TileScriber but maintain a higher level of backwards compatibility with older content as the tool evolves.
-* The `tileSets` parameter is an array of tile sets. See the section below for details on a tileset object.
-* The `itemSets`  parameter is an array of item sets. See the Items section below for details on items.
-
-The images used for item and tilesets can each be an individual png but this is not recommended. Instead, artists should consider placing all of the art for a pack into a spritesheet.
-
-The folder name, JSON filename, and packname should match. The image(s) used by a pack and the JSON file must all be located in a folder together within the "Packs" folder where content is stored.
-
-Changing your Pack name or other naming may break maps that use a pack!
+<figure><img src="../.gitbook/assets/terrascriber-packchooser.png" alt=""><figcaption></figcaption></figure>
 
 ### Tile Sets
 
 A tileset is a collection of tiles that is associated with a layer to automatically render the correct tile in a layer layout. Consistent requirements for tilesets allow map makers to change the tileset for a whole layer at once to experiment with different looks.
 
+#### Creating Tileset Art
+
 A tileset is 8x8 tiles that are 16px square for a total tileset size of 128x128 pixels. The image below shows the required tile layout with the green overlay showing the tile type:
 
-![](../.gitbook/assets/tile-layout.png)&#x20;
+![Tileset layout in TerraScriber](../.gitbook/assets/tile-layout.png)&#x20;
 
 In the image above the line overlays show wall-like tile layouts including a standalone tile, tee intersections, corners, linear walls, and endcaps.
 
@@ -71,89 +63,60 @@ Note that this tileset layout does not include every possible combination of til
 For now, tileset creators can include Items that can be designed to tie into layers for unique things like rounded corners or special junctions.
 {% endhint %}
 
-Below is the JSON to define a TileSet:
+#### Defining Pack Tilesets
 
-```json
-"tileSets": [
-  {
-    "setName": "CottageStone (Normal)",
-    "texture": "coreFantasy.png",
-    "offset": {
-      "X": 0,
-      "Y": 640
-    }
-  }
-]
-```
+Once you have added tileset art to the png file associated with your pack, you can define the tilesets in TerraScriber. Load your pack for editing from the Pack Chooser screen and add or edit Tilesets in the tileset editing mode:
 
-* The `setName` parameter defines the name of your tileset and is what is shown in UI. If you change this name, it may break maps that use this tileset.
-* The `texture` parameter is the name of the image file with your tileset.
-* The `offset`parameter allows you to specify the X and Y offset of your tileset in a large image file, allowing you to pack multiple TileSets and ItemSets into a single file.
+<figure><img src="../.gitbook/assets/terrascriber-edit-tilesets.png" alt=""><figcaption><p>Editing Tilesets in TerraScriber</p></figcaption></figure>
+
+1. Select TileSets to edit tilesets in your Pack
+2. The tileset list shows the tilesets defined in your pack. If the tileset is correctly aligned, the preview image will be the self-contained tile.
+3. Add a new tileset
+4. Delete the selected tileset
+5. Edit the tileset name
+6. Manually edit tileset coordinates
+7. Drag the scalable rectangle box to visually align tileset. Note that tilesets are a fixed size so dragging the rectangle handles will not alter the size
+
+Any defined tilesets will be outlined on the image with a faint border so you can see which tilesets in the image have been defined in the pack.
 
 ### Item Sets
 
 Items are objects that can be placed arbitrarily without aligning to a tile grid. Items can be rotated and flipped, and have their Z index be changed to control how they are layered together. However, items will always render on top of layers.
 
+#### Item Art
+
 Items are just sprites on a sprite sheet and can be any size. Here is an example of some of the items that ship in the default "coreFantasy" pack that comes with TerraScriber:
 
-<figure><img src="../.gitbook/assets/item-layout.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/item-layout.png" alt=""><figcaption><p>Items on a Spritesheet</p></figcaption></figure>
 
 {% hint style="info" %}
 Items must always "face" towards the right. This is important because TerraScriber allows users to both rotate and flip items. Items are flipped horizontally, which means if you do not "face" your items consistently towards the right they will not rotate and flip correctly.
 {% endhint %}
 
-Multiple items are defined into a collection called an ItemSet. For example, you might have a "Kitchen Items" set that includes plates, forks, knives, herbs, etc. Here is an example of item set JSON that defines a few items:
+Defining Pack Items
 
-```json
-"itemSets": [
-  {
-    "setName": "Fantasy Items",
-    "texture": "coreFantasy.png",
-    "items": [
-      {
-        "itemName": "Anvil",
-        "leftPixel": 17,
-        "topPixel": 193,
-        "width": 20,
-        "height": 7
-      },
-      {
-        "itemName": "Axe",
-        "leftPixel": 17,
-        "topPixel": 201,
-        "width": 14,
-        "height": 6
-      },
-      {
-        "itemName": "Barrel",
-        "leftPixel": 34,
-        "topPixel": 50,
-        "width": 12,
-        "height": 12
-      }
-  }
-]
-```
+Once you have added item art to the png file associated with your pack, you can define the tilesets in TerraScriber. Load your pack for editing from the Pack Chooser screen and add or edit Items in the item editing mode:
 
-* The `setName` parameter defines the ItemSet name for a collection of items.
-* The `texture` parameter defines the texture used by the items. All items in a set must share a texture.
-* The `items` parameter is an array of Items
+<figure><img src="../.gitbook/assets/terrascriber-edit-items.png" alt=""><figcaption><p>Editing Items in TerraScriber</p></figcaption></figure>
 
-Each Item in an ItemSet must include these parameters:
+1. Select Items to edit items in your Pack
+2. The filter box allows you to filter the item list to find items easier
+3. The item list, showing which item is selected for editing
+4. Add a new item
+5. Duplicate the selected item
+6. Delete the selected item
+7. Manually edit item name and coordinates
+8. Edit item bounds by dragging rectangle or resizing with handles
+9. Mapped items will show a border so you can see which items in the image have not been defined as pack items
 
-* `itemName` - The unique name of the item in the set. Name items carefully so they are searchable and filterable. Changing an item's name may break maps that use that item!
-* `leftPixel` - Defines the zero-indexed pixel on the leftmost side of the item.
-* `topPixel` - Defines the zero-indexed pixel on the topmost side of the item.
-* `width` - Defines the width of the item from the left pixel
-* `height` - Defines the height of the item from the top pixel
+{% hint style="info" %}
+When defining items, consider prefixing or postfixing related items with a filterable term, such as "Animal" in the image above. This allows users to filter to related items when editing maps. For example, filtering on "Animal" will refine the list to only show types of animals and make it much easier to use items in the map!
+{% endhint %}
 
-This collection of properties allows the artist to define a square portion of a larger image for each item. Note that Items must occupy a rectangular space on the spritesheet, meaning that items with large concave areas cannot have other Items packed into the concave space!
+### Distributing Your Pack
 
-### Final Tips
+It should go without saying that all relevant copyright law applies to content created for TerraScriber. You should not create packs with art you don't own the correct rights to. TerraScriber and its parent company Narfox do not have a mechanism to prevent or enforce content licensing. Any content you choose to create and distribute is your sole responsibility.
 
-Here are some suggestions for creating great Packs that look good when combined with other packs:
+Packs are automatically saved whenever you change a tileset or item, or when exiting the edit experience and returning to the Pack Chooser screen. Note that closing the application entirely could result in your most recent edit not being saved.
 
-1. **Consistent Palette** - The Core Fantasy pack that ships with TerraScriber uses the [Zughy 32 Palette defined on lospec.com](https://lospec.com/palette-list/zughy-32)
-2. **Consistent "Readability"** - this is the idea of separating background, foreground, and items values so that it's easy to tell which parts of a map are passable or blocked, and what objects are items on the map. Use lighter colors for floors and darker colors for solids and walls. Outline items in dark or black outlines. This also helps maps look good when effects are applied.
-3. **Consistent Scale** - A square tile is assumed to be roughly 5' or 1.5 meters across. Keeping this in mind and measuring or looking up measurements for items will help your content look consistent when used in combination with other artists work!
-4. **Consistent Searchability** - Since item names are what maps reference to load items from a pack, you need to keep your naming consistent. Consider using a naming scheme like `[item type] [item material] [item size]` so that your items have names like "Chair Wooden Medium". This allows users to filter for "Chair" and see related items grouped together.
+Since a Pack is just a JSON file and a PNG image in a folder, the easiest way to distribute a pack is to zip the pack folder and then share the pack however you want! You may want to include a license text file in your pack if you want to specify usage rights.
